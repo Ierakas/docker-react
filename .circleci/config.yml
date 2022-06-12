@@ -17,13 +17,13 @@ jobs:
         #   - run:
         #  name: "Install Docker client"
         #  command: "apk add docker-cli"
-      - run: sudo apt-get update && sudo apt-get install -y cowsay
-      - run: cowsay Continuous Integration Rocks!
+      - run: "ls -l"
+      - run: "ls -l /"
+      - run: "sudo apt-get update && sudo apt-get install -y cowsay"
+      - run: "cowsay Continuous Integration Rocks!"
       - run:
           name: "Before install"
           command: "echo Hello, Before Install!"
-          command: "ls -l"
-          command: "ls -l /" 
       - run:
           name: "Docker Build"
           command: "docker build --tag docker-react --file Dockerfile.dev ."
