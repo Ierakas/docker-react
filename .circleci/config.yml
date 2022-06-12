@@ -46,7 +46,7 @@ jobs:
         #    apt-get install -y docker-ce
         #    docker --version
       - setup_remote_docker:
-          version: 18.0.1 
+          version: 20.10.11 
       - run:
           name: Build and deploy docker images
           command: |
