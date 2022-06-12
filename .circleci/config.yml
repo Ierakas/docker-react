@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Build and deploy docker images
           command: |
-             docker build -t myapp --file Dockerfile.dev .
+             docker build -t  docker-react --file Dockerfile.dev .
       - run:
           name: "Before install"
           command: "echo Hello, Before Install!"
