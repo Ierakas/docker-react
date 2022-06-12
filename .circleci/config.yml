@@ -19,8 +19,11 @@ jobs:
         #  command: "apk add docker-cli"
       - run: "ls -l"
       - run: "ls -l /"
+      - run: "id"
       - run: "sudo apt-get update && sudo apt-get install -y cowsay"
       - run: "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin"
+      - run: "sudo service docker status"
+      - run: "sudo service docker start"
       - run: "sudo docker run hello-world"
       - run:
           name: "Before install"
