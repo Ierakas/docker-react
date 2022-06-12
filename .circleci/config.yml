@@ -6,6 +6,6 @@ services:
 before_install:
   - docker biuld -t docker-react -f Dockerfile.dev .
 
-script:
+jobs:
   - docker run -e CI=true docker-react npm run test
 
