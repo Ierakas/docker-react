@@ -79,4 +79,8 @@ workflows:
     jobs:
       - say-hello:
           context: aws
+          filters:
+            branches:
+              only:
+                - master
 
