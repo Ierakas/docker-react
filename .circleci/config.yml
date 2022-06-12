@@ -15,6 +15,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Install Docker client"
+          command: "apk add docker-cli"
+      - run:
           name: "Before install"
           command: "echo Hello, Before Install!"
       - run:
