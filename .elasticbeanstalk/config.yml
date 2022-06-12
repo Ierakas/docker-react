@@ -1,0 +1,9 @@
+branch-defaults:
+  master:
+    environment: elasticbeanstalk:Dockerreact-env
+global:
+  application_name: docker-react
+  default_ec2_keyname: elasticbeanstalk:e-m93ujszj7i
+  default_platform: Docker running on 64bit Amazon Linux 2
+  default_region: eu-central-1
+  sc: git
