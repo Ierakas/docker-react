@@ -45,7 +45,8 @@ jobs:
         #    apt-get update
         #    apt-get install -y docker-ce
         #    docker --version
-      - setup_remote_docker
+      - setup_remote_docker:
+   #       version: 1.9.1 
       - run:
           name: Build and deploy docker images
           command: |
@@ -56,9 +57,9 @@ jobs:
             #     - run:
             #  name: "Docker Build"
             # command: "docker build --tag docker-react --file Dockerfile.dev ."
-            #     - run:
-            #     name: Docker Run
-            #      command: docker run -e CI=true docker-react npm run test
+     - run:
+          name: Docker Run
+          command: docker run -e CI=true docker-react npm run test
 
       - run:
           name: Installing deployment dependencies
