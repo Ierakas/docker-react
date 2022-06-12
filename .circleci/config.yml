@@ -19,7 +19,7 @@ jobs:
           command: "echo Hello, Before Install!"
       - run:
           name: "Docker Build"
-          command: "docker biuld --tag docker-react --file Dockerfile.dev ."
+          command: "docker build --tag docker-react --file Dockerfile.dev ."
       - run:
           name: "Docker Run"
           command: "docker run -e CI=true docker-react npm run test"
