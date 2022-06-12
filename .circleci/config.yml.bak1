@@ -1,0 +1,18 @@
+version: 2.1
+
+workflows:
+  version: 2
+  biuld:
+    jobs:
+      - build
+        
+sudo: required
+services:
+  - docker
+
+run:
+  - docker biuld -t docker-react -f Dockerfile.dev .
+
+run:
+  - docker run -e CI=true docker-react npm run test
+
