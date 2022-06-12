@@ -57,7 +57,7 @@ jobs:
             #     - run:
             #  name: "Docker Build"
             # command: "docker build --tag docker-react --file Dockerfile.dev ."
-     - run:
+      - run:
           name: Docker Run
           command: docker run -e CI=true docker-react npm run test
 
