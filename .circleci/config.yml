@@ -16,10 +16,10 @@ jobs:
       - checkout
       - run:
           name: "Before install"
-          command: "echo Hello, World!"
+          command: "echo Hello, Before Install!"
       - run:
           name: "Docker Build"
-          command: "docker biuld -t docker-react -f Dockerfile.dev ."
+          command: "docker biuld --tag docker-react --file Dockerfile.dev ."
       - run:
           name: "Docker Run"
           command: "docker run -e CI=true docker-react npm run test"
