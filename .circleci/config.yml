@@ -15,11 +15,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "pre-install"
+          name: "Before install"
           command: "echo Hello, World!"
+      - run:
+          name: "Docker Build"
           command: "docker biuld -t docker-react -f Dockerfile.dev ."
       - run:
-          name: "docker-run"
+          name: "Docker Run"
           command: "docker run -e CI=true docker-react npm run test"
 
 # Invoke jobs via workflows
@@ -27,5 +29,4 @@ jobs:
 workflows:
   say-hello-workflow:
     jobs:
-      - pre-intsall
-      - docker-run
+      - say-hello
